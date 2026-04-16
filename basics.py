@@ -1333,6 +1333,6 @@ if os.path.exists("demofile.txt"):
 else:
   print("The file does not exist")
 
-# Delete folder =>
+# Delete folder :
 import os
 os.rmdir("myfolder")
