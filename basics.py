@@ -894,6 +894,21 @@ name_iter = iter(name)
 print(next(name_iter))  # Output: P
 print(next(name_iter))  # Output: y
 
+class InfiniteCounter:
+    def __iter__(self):
+        self.num = 1
+        return self
+    def __next__(self):
+        val = self.num
+        self.num += 1
+        return val
+counter = InfiniteCounter()
+my_iter = iter(counter)
+
+print(next(my_iter)) # 1
+print(next(my_iter)) # 2
+# This could go on forever!
+
 # Strings are also iterable objects, containing a sequence of characters:
 mystr = "banana"
 myit = iter(mystr)
