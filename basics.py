@@ -889,6 +889,11 @@ print(next(myit))
 print(next(myit))
 print(next(myit)) 
 
+name = "Python"
+name_iter = iter(name)
+print(next(name_iter))  # Output: P
+print(next(name_iter))  # Output: y
+
 # Strings are also iterable objects, containing a sequence of characters:
 mystr = "banana"
 myit = iter(mystr)
